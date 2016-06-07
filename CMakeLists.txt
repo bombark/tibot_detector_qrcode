@@ -3,7 +3,6 @@ project (camera_fake)
 
 find_package( OpenCV REQUIRED )
 
-add_executable (camera_fake src/main.cpp)
-target_link_libraries (camera_fake tiobj ${OpenCV_LIBS})
+add_executable (detector_qrcode src/main.cpp)
+target_link_libraries (detector_qrcode tiobj ${OpenCV_LIBS} zbar)
 
-install(TARGETS camera_fake DESTINATION bin)
